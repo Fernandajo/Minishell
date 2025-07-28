@@ -1,42 +1,50 @@
-# Minishell
+# 🐚 Minishell  
+>_As beautiful as a shell_
 
-Minishell is a simple shell implementation written in C. It provides basic shell functionalities, allowing users to execute commands, handle input/output redirection, and manage processes.
+Minishell is a small recreation of 'bash' written from scratch in C. This was a group project with my teammate Mariia as part of the 42 curriculum. It supports many core features found in standard Unix shells, such as pipes, redirections, environment variables, and built-in commands.
 
-## Features
+The goal was to better understand how shells work under the hood by building one ourselves — from input parsing to process management.
 
-- Execute basic shell commands.
-- Input and output redirection (`>`, `<`, `>>`).
-- Pipe (`|`) support for chaining commands.
-- Environment variable handling.
-- Built-in commands like `cd`, `echo`, `exit`, etc.
-- Signal handling (e.g., `Ctrl+C`, `Ctrl+D`).
+---
 
-## Requirements
+## ⚙️ Features
 
-- GCC or any C compiler.
-- Make utility.
+Minishell supports a variety of shell behaviors, including:
 
-## Installation
+- **Prompt display** and user input parsing
+- **Execution of binaries** using `PATH` resolution
+- Built-in commands:
+  - `cd`
+  - `echo`
+  - `env`
+  - `exit`
+  - `export`
+  - `pwd`
+  - `unset`
+- **Pipes** (`|`) to chain commands
+- **Redirections**:
+  - Input `<`
+  - Output `>`
+  - Append `>>`
+  - Heredoc `<<`
+- **Environment variable** handling (`$VAR`)
+- **Quotes and escaping**: proper handling of `'`, `"`, and `\`
+- **Signal handling** for `Ctrl+C`, `Ctrl+\`, and `Ctrl+D`
+- **Exit status codes** for pipeline consistency
+- **Error handling** for syntax errors, missing binaries, etc.
 
-1. Clone the repository:
-	```
-	git clone <repository_url>
-	cd minishell
-	```
+---
 
-2. Build the project:
-	```
-	make
-	```
+## 🛠️ Building the Project
 
-## Usage
+To compile the project, simply run:
 
-Run the shell:
+```bash
+make
 ```
+To execute and enter the shell program:
+
+```bash
 ./minishell
 ```
 
-Type commands as you would in a regular shell. For example:
-```
-ls -l | grep minishell > output.txt
-```
