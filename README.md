@@ -5,6 +5,10 @@ Minishell is a small recreation of 'bash' written from scratch in C. This was a 
 
 The goal was to better understand how shells work under the hood by building one ourselves — from input parsing to process management.
 
+<p align="center">
+  <img src="assets/Minishell_demo.gif" alt="Minishell in action" width="600"/>
+</p>
+
 ---
 
 ## ⚙️ Features
